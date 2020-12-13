@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Задание 4</title>
+</head>
+<body>
+    Наименование товара: <input id="Na">
+    Количество: <input id="kol">
+    <button id="Bu">Тык</button>
+    <p id="Text_1"></p>
+    <p id="Text_2"></p>
+    <script>
+        let sum=0;
+        function test(){           
+        let Na = document.querySelector('#Na')
+        let kol = document.querySelector('#kol')
+        let Text_1 = document.querySelector('#Text_1')
+        let text = Na.value + ", " + kol.value + " шт."
+        sum = +sum + +kol.value
+        Text_1.innerHTML += '<br>' + text
+        let Text_2 = document.querySelector('#Text_2')
+        Text_2.innerHTML = '<br>' + "Итого: " + sum + " шт."
+        }
+        let Bu = document.querySelector('#Bu')
+        Bu.addEventListener('click', test)
+    </script>
+</body>
+</html>

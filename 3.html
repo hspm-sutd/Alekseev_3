@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Задание 3</title>
+</head>
+<body>
+    Имя: <input id="Na">
+    Отчество: <input id="Na_2">
+    <button id="Bu">Тык</button>
+    <p id="Text_1"></p>
+    <p id="Text_2"></p>
+    <script>
+        var one = true
+        var ONa = ""
+        var ONa_2 = ""
+        function test() {
+            let Na = document.querySelector('#Na')
+            let Na_2 = document.querySelector('#Na_2')
+            let Text_1 = document.querySelector('#Text_1')
+            let Text_2 = document.querySelector('#Text_2') 
+            let HText = `Привет, ${Na.value} ${Na_2.value}!`
+            let GText = `Пока, ${ONa} ${ONa_2}!`
+            if (Na.value == '') alert('Вы не ввели данные')
+            else {
+                Text_1.innerHTML = HText
+                if (one == false) Text_2.innerHTML = GText
+                ONa = Na.value
+                ONa_2 = Na_2.value
+                one = false
+            }
+        }
+        var Bu = document.querySelector('#Bu')
+        Bu.addEventListener('click', test)
+    </script>
+</body>
+</html>

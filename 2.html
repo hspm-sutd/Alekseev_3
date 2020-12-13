@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Задание 2</title>
+</head>
+<body>
+    Имя: <input id="Na">
+    Отчество: <input id="Na_2">
+    <button id="Bu">Тык</button>
+    <p id="Text_1"></p>
+    <script>
+        function test() {
+            let Na = document.querySelector('#Na')
+            let Na_2 = document.querySelector('#Na_2')
+            let Text_1 = document.querySelector('#Text_1')
+            if (Na.value == '') alert('Вы не ввели данные')
+            else {
+                let text = `Привет, ${Na.value} ${Na_2.value}!`
+                Text_1.innerHTML = text
+            }
+        }
+        let Bu = document.querySelector('#Bu')
+        Bu.addEventListener('click', test)
+    </script>
+</body>
+</html>
